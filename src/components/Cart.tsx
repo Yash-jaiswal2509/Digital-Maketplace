@@ -6,14 +6,12 @@ import { Separator } from "./ui/separator";
 import { formatPrice } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import Image from "next/image";
 
 
 const Cart = () => {
-    const itemCount = 0;
+    const itemCount = 1;
     const fee = 499;
     return (
-        //From shadcn
         <Sheet>
             <SheetTrigger className="group -m-2 flex items-center p-2">
                 <ShoppingCart className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500" />
@@ -58,21 +56,7 @@ const Cart = () => {
                             </SheetFooter>
                         </>
                     ) : (
-                        <div className="flex h-full flex-col items-center justify-center space-y-1">
-                            <div aria-hidden='true' className="relative mb-4 h-60 w-60 text-muted-foreground">
-                                <Image src='/hippo-empty-cart.png' fill alt="empty shopping cart" />
-                            </div>
-                            <div className="text-xl font-semibold">Your Cart is Empty</div>
-                            <SheetTrigger asChild>
-                                <Link
-                                    href='/products'
-                                    className={buttonVariants({
-                                        variant: 'link',
-                                        size: 'sm',
-                                        className: 'text-sm text-muted-foreground'
-                                    })}>Add items to your cart to checkout</Link>
-                            </SheetTrigger>
-                        </div>
+                        <div></div>
                     )
                 }
             </SheetContent>
