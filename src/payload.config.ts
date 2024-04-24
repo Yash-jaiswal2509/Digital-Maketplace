@@ -13,9 +13,9 @@ export default buildConfig({
   admin: {
     bundler: webpackBundler(),
     meta: {
-      titleSuffix: "- DigitalHippo",
-      favicon: "/favicon.ico",
-      ogImage: "/thumbnail.jpg",
+      titleSuffix: "- Digital Marketplace",
+      favicon: "favicon.ico",
+      ogImage: "thumbnail.jpg",
     },
   },
   rateLimit: {
